@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f4f3f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e0d12" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="EduReach: low-bandwidth virtual classroom for rural institutes" />
+    <!-- Declared explicitly so the browser does not fall back to requesting
+         /favicon.ico, which does not exist and costs a wasted round-trip. -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>EduReach</title>
+    <style>
+      /* Inlined so the first paint needs no extra round-trip on a slow link,
+         and matched to the app palette so there is no flash of the wrong
+         colour before the stylesheet arrives. */
+      html {
+        background: #f4f3f7;
+        color: #16151a;
+        font-family: "Segoe UI Variable Display", system-ui, -apple-system, sans-serif;
+      }
+      body { margin: 0; }
+      #boot { display: grid; place-items: center; min-height: 100vh; font-size: 15px; opacity: 0.55; }
+      @media (prefers-color-scheme: dark) {
+        html { background: #0e0d12; color: #f2f1f6; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"><div id="boot">Loading EduReach…</div></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
